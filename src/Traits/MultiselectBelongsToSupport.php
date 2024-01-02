@@ -117,7 +117,7 @@ trait MultiselectBelongsToSupport
 
             // Default value
             if ($request->isCreateOrAttachRequest()) {
-                if (is_null($value) || $value->isEmpty) $value = $this->resolveDefaultValue($request) ?? $value;
+                if (is_null($value) || $value->isEmpty()) $value = $this->resolveDefaultValue($request) ?? $value;
             }
 
             $models = $async
